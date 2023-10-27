@@ -3,10 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>Abhishek Sai</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="header"></div>
+    <div class="container">
+      <nav>
+        <h1 id="name"><span id="first-letter">A</span>BHISHEK SAI SURISETTY</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+     </nav>
+    <div class="header-text">
+      <p>Software Developer</p>
+      <h1>Hi, I am <span>Abhishek!<br></span>I am an aspiring Software Developer.</h1>
+    </div>
+<!--ABOUT-->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/abhi-passport.jpeg">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veniam architecto explicabo aspernatur iusto quam consectetur mollitia, fugiat inventore nesciunt ipsum vel, placeat quod incidunt fuga fugit iure odit aliquam.</p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+<!-- ----------------SKILLS----------------------- -->
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+              <li><span>Programming Languages</span><br>C/C++,Java,JavaScript,Python</li>
+              <li><span>Web</span><br>HTML,CSS,RESTful APIs,JWT,Bootstrap</li>
+              <li><span>Databases</span><br>MySQL,MongoDB,Amazon DynamoDB</li>    
+              <li><span>Libraries/Frameworks</span><br>ReactJS,ExpressJS,Spring Boot</li>    
+              <li><span>Tool/Misc</span><br>Visual Studio Code, Git, Postman, Linux</li>    
+          </ul>
+        </div>
+<!-- ----------EXPERIENCE-------------------------- -->
+        <div class="tab-contents" id="experience">
+          <ul>
+            <!-- Segregate into academic and professional experiences with Dates,etc  -->
+              <li><span>Ernst and Young LLP</span><br>Associate Technology Consultant - Software Developer</li>
+              <li><span>Cisco</span><br>Software Engineering Intern</li>
+              <li><span>UC Riverside</span><br>Graduate Teaching Assistant</li>    
+              <li><span>UC Riverside</span><br>Graduate Grader</li>   
+              <li><span>BITS Pilani</span><br>Undergraduate Teaching Assistant</li>   
+          </ul>
+        </div>
+<!-- ------------------EDUCATION-------------- -->
+        <div class="tab-contents" id="education">
+          <ul>
+              <li><span>UC Riverside</span><br>Master of Science: Computer Engineering</li>
+              <!-- Add Relavant Courses later -->
+              <li><span>BITS Pilani</span><br>Bachelors of Engineering: Electronics and Communication</li>
+              <!-- <li><span>Frontend</span><br>Frontend Developer</li>    -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+  <script>
+    // External JS file later?
+   var tablinks=document.getElementsByClassName("tab-links");  
+   var tabcontents=document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+  </script>
   
 </body>
 </html>
