@@ -80,9 +80,28 @@ nav ul li a:hover::after{
   color:#ffffff;
   font-size:35px;
 }
-#name #first-letter{
+#name .first-letter{
   color:#ff004f;
   font-size:42px;
+  /* transition:transform 0.8s; */
+
+}
+
+#name .first-letter:hover{
+  /* transform:translateY(-10px); */
+
+  position:relative;
+  top:-10px;
+  cursor:pointer;
+  /* color:blue;  */
+}
+
+#name .not-first-name:hover{
+  color:#ff004f;
+  position:relative;
+  top:-10px;
+
+
 }
 
 /* #header #name::not(::first-letter){
@@ -185,6 +204,7 @@ nav ul li a:hover::after{
   font-weight:300;
   border-radius:10px;
   transition:background 0.5s, transform 0.5s;
+
 }
 
 .services-list i{
@@ -210,6 +230,7 @@ nav ul li a:hover::after{
   background:#ff004f;
   transform:translateY(-10px);
 
+
 }
 /* --------------Projects--------------- */
 .projects-list{
@@ -230,6 +251,7 @@ nav ul li a:hover::after{
   border-radius:10px;
   display:block;
   transition:transform 0.5s;
+
 }
 
 .layer{
@@ -271,6 +293,7 @@ nav ul li a:hover::after{
 
 .project:hover img{
   transform:scale(1.1);
+
 }
 
 .project:hover .layer{
@@ -293,3 +316,79 @@ nav ul li a:hover::after{
 .btn:hover{
   background:#ff004f;
 }
+/* -----------------Contact---------- */
+.contact-left{
+  flex-basis:35%;
+}
+
+.contact-right{
+  flex-basis:60%;
+}
+
+.contact-left p{
+  margin-top:30px;
+}
+
+.contact left p i{
+  color:#ff004f;
+  margin-right:15px;
+}
+
+.social-icons{
+  margin-top:30px;
+}
+
+.social-icons a{
+  text-decoration:none;
+  font-size:30px;
+  margin-right:15px;
+  color:#ababab;
+  display:inline-block;
+  transition:transform 0.5s;
+}
+
+.social-icons a:hover{
+  color:#ff004f;
+  transform:translateY(-5px);
+}
+
+.btn.btn2{
+  display:inline-block;
+  background-color:#ff004f;
+}
+.contact-right form{
+  width:100%;
+}
+
+form input, form textarea{
+  width:100%;
+  border:0;
+  outline:none;
+  background:#262626;
+  padding:15px;
+  margin:15px 0;
+  color:#fff;
+  font-size:18px;
+  border-radius:6px;
+}
+
+form .btn2{
+  padding:14px 40px;
+  font-size:18px;
+  margin-top:5px;
+  cursor:pointer;
+}
+
+.copyright{
+  width:100%;
+  text-align:center;
+  padding:12px 0;
+  background:#262626;
+  font-weight:300;
+  margin-top:20px;
+}
+
+.copyright i{
+  color:#ff004f;
+}
+
