@@ -9,17 +9,19 @@
   <script src="https://kit.fontawesome.com/9de886b1f3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header"></div>
+  <div id="header"> 
     <div class="container">
+      <h1 id="name" class="header"><span class="first-letter">A</span>BHISHEK <span class=" not-first-name">S</span>AI <span class="not-first-name">S</span>URISETTY</h1>
       <nav>
-        <h1 id="name"><span class="first-letter">A</span>BHISHEK <span class=" not-first-name">S</span>AI <span class="not-first-name">S</span>URISETTY</h1>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark fa-smallscreen" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars fa-smallscreen" onclick="openmenu()"></i>
      </nav>
     <div class="header-text">
       <p>Software Developer</p>
@@ -30,7 +32,7 @@
   <div class="container">
     <div class="row">
       <div class="about-col-1">
-        <img src="images/abhi-passport.jpeg">
+        <img src="images/abhi.jpg">
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
@@ -109,7 +111,7 @@
 </div>
 
 <!-- ----------------------Projects----------->
-<div class="portfolio">
+<div id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Projects</h1>
     <div class="projects-list">
@@ -150,21 +152,22 @@
         <p><i class="fa-solid fa-paper-plane"></i> abhi********@gmail.com</p>
         <p> <i class="fa-solid fa-phone"></i> +1 347*******</p>
         <div class="social-icons">
+          <a href="https://github.com/abhishekssai"><i class="fa-brands fa-github"></i>
+          <a href="https://www.linkedin.com/in/abhishek-sai-surisetty/"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>  
         </div>
         <a href="files/BlankFile.docx" download class="btn btn2">Download Resume</a>
       </div>
       <div class="contact-right">
-        <form>
+        <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
             <input type="email" name="Email" placeholder="Your Email" required>
             <input type="tel" name="Mobile Number" placeholder="Your Mobile Number (Not Mandatory)">
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn2">Submit</button>
         </form>
+        <span id="msg"> </span> <!--To Display a "Message sent succesfully" after submitting the form-->
     </div>
   </div>
 </div>
@@ -188,6 +191,34 @@
     document.getElementById(tabname).classList.add("active-tab");
    }
   </script>
+  <script>
+    var sidemenu=document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right="0px";
+    }
+
+    function closemenu(){
+      sidemenu.style.right="-200px";
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyy632TDY0pAEhgoOQ6Qcwlofh7mN5K_JxH98Tw1w7u7cUwsfT_M5qL5RKahQH8iLWKlg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
   
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML="Message sent succesfully"
+          setTimeout(function(){
+            msg.innerHTML=""
+        },3000)
+        form.reset()
+      })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
