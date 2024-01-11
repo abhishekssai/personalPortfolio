@@ -11,22 +11,26 @@
 <body>
   <div id="header"> 
     <div class="container">
-      <h1 id="name" class="header"><span class="first-letter">A</span>BHISHEK <span class=" not-first-name">S</span>AI <span class="not-first-name">S</span>URISETTY</h1>
+      <div class="logo">
+      <h1 id="name"><span class="first-letter">A</span>BHISHEK <span class=" not-first-name">S</span>AI <span class="not-first-name">S</span>URISETTY</h1>
       <nav>
+        <!--<img src="images/logo.png" class="logo">-->
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#interests">Interests</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark fa-smallscreen" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars fa-smallscreen" onclick="openmenu()"></i>
      </nav>
-    <div class="header-text">
+    </div>
+    
+   <!-- <div class="header-text">
       <p>Software Developer</p>
-      <h1>Hi, I am <span>Abhishek!<br></span>I am an aspiring Software Developer.</h1>
-  </div>
+      <h1>Hi, I am <span>Abhishek!</span><br>
+  </div> -->
 <!--ABOUT-->
 <div id="about">
   <div class="container">
@@ -36,7 +40,8 @@
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veniam architecto explicabo aspernatur iusto quam consectetur mollitia, fugiat inventore nesciunt ipsum vel, placeat quod incidunt fuga fugit iure odit aliquam.</p>
+        <br>
+        <p>I am a Master's student in Computer Engineering blending passion with pixels. Dive into my digital universe, where code becomes a canvas for innovation, and each project tells a story of curiosity and creativity.</p>
 
         <div class="tab-titles">
           <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -80,29 +85,29 @@
 </div>
 <!-- Format Divs properly -->
 
-<!-- -------------Services------- -->
-<div id="services">
+<!-- -------------Interests------- -->
+<div id="interests">
   <div class="container">
-    <h1 class="sub-title">My Services</h1>
-    <div class="services-list">
+    <h1 class="sub-title">My Interests</h1>
+    <div class="interests-list">
       <div>
         <i class="fa-solid fa-code"></i>
         <h2>Web Development</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos cum et dicta culpa iste soluta, aspernatur atque ex, voluptatibus adipisci ratione excepturi est asperiores nulla possimus earum doloremque commodi.</p>
-        <a href="#">Learn More</a>
+        <p>Mastering the art of web development, I specialize in the MERN (MongoDB, Express.js, React, Node.js) stack. Crafting dynamic and efficient applications, I bring ideas to life with a seamless blend of technology and creativity.</p>
+        <a href="#portfolio">Learn More</a>
       </div>
       <div>
         <i class="fa-regular fa-envelope"></i>
         <h2>API Development</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos cum et dicta culpa iste soluta, aspernatur atque ex, voluptatibus adipisci ratione excepturi est asperiores nulla possimus earum doloremque commodi.</p>
-        <a href="#">Learn More</a>
+        <p>Excel in the realm of API development, with expertise in crafting robust and scalable solutions. Proficient in Java Spring Boot and Express, I specialize in building efficient APIs that power modern applications. Transforming ideas into seamless and connected experiences.</p>
+        <a href="#portfolio">Learn More</a>
       </div>
       <div>
         <i class="fa-solid fa-calculator"></i>
         <i class="fa-solid fa-brain"></i>
         <h2>Mental Math</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos cum et dicta culpa iste soluta, aspernatur atque ex, voluptatibus adipisci ratione excepturi est asperiores nulla possimus earum doloremque commodi.</p>
-        <a href="#">Learn More</a>
+        <p>Dive into the art of mental math – where numbers come to life effortlessly. I've honed my skills to swiftly tackle equations, making calculations a breeze. Ready to elevate your numerical game? Let's explore the world of sharp and precise mental math together.</p>
+        <a href="https://drive.google.com/drive/folders/1aNDQWxOB_NwiKas3wmw6UJdSi3MCH56W?usp=sharing" target="_blank">Learn More</a>
       </div>
 
     </div>
@@ -116,31 +121,32 @@
     <h1 class="sub-title">My Projects</h1>
     <div class="projects-list">
       <div class="project"> 
-        <img src="images/proj1.jpeg">
+        <img src="images/realestate.jpg">
         <div class="layer">
-          <h3>NotesApp</h3>
+          <h3>Real Estate Listing Website</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae animi excepturi praesentium accusantium error laborum quam hic, consequatur explicabo.</p>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://abhishek-realty.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
       <div class="project"> 
-        <img src="images/proj2.png">
+        <img src="images/proj2.png">  
         <div class="layer">
           <h3>API Development</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae animi excepturi praesentium accusantium error laborum quam hic, consequatur explicabo.</p>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p>
+            Crafted a robust Blog Application backend with API Development skills, utilizing Java, Spring Boot, and MySQL. The implementation includes a secure authentication system with JWT tokens, ensuring user-friendly access and authorization. Enhanced user experience through the incorporation of pagination and search functionalities. Experience secure and scalable blogging with this meticulously developed application.</p>
+          <a href="https://github.com/abhishekssai/BlogApp-SpringBoot" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
       <div class="project"> 
         <img src="images/proj3.svg">
         <div class="layer">
           <h3>Twitter Search Engine</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae animi excepturi praesentium accusantium error laborum quam hic, consequatur explicabo.</p>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p>Crafted a powerful Search Engine for Tweets using Twitter Filter Stream API, PyLucene, and BERT models. Gathered a substantial 1GB dataset, honing in on job market trends, and optimized storage/retrieval for efficient tweet analysis. The result is a high-performance Command Line Interface, providing users with instant search and retrieval capabilities.</p>
+          <a href="https://github.com/abhishekssai/Twitter-Search-Engine" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
-    <a href="#" class="btn">See More</a>
+    <a href="https://github.com/abhishekssai" class="btn" target="_blank">See More</a>
   </div>
 </div>
 <!-- -----------------Contact---------- -->
@@ -149,15 +155,15 @@
     <div class="row">
       <div class="contact-left">
         <h1 class="sub=title">Contact Me</h1>
-        <p><i class="fa-solid fa-paper-plane"></i> abhi********@gmail.com</p>
-        <p> <i class="fa-solid fa-phone"></i> +1 347*******</p>
+        <p><i class="fa-solid fa-paper-plane"></i> asuri016@ucr.edu</p>
+        <p> <i class="fa-solid fa-phone"></i> +1 3472162771</p>
         <div class="social-icons">
-          <a href="https://github.com/abhishekssai"><i class="fa-brands fa-github"></i>
-          <a href="https://www.linkedin.com/in/abhishek-sai-surisetty/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+          <a href="https://github.com/abhishekssai" target="_blank"><i class="fa-brands fa-github"></i>
+          <a href="https://www.linkedin.com/in/abhishek-sai-surisetty/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abhisheksai29" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/abhishek.surisetty/" target="_blank"><i class="fa-brands fa-instagram"></i></a>  
         </div>
-        <a href="files/BlankFile.docx" download class="btn btn2">Download Resume</a>
+       <!-- <a href="files/BlankFile.docx" download class="btn btn2">Download Resume</a> -->
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">
